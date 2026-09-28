@@ -214,3 +214,28 @@ flowchart LR
 `GREEN` присваивается только воспроизводимым утверждениям. Исследовательский код, диаграмма или заявленная метрика без проверяемого artifact trail остаются `R&D/CANDIDATE`.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+
+---
+
+# ⚛️ Глубокий научный паспорт Cold Nuclear
+
+## Уже правильная научная дисциплина
+
+Repo чётко разделяет `EVALUATED/MEASURED`, `DERIVED`, `STRESS TEST`, `HYPOTHESIS`, `LEGACY`. Это нужно сохранить как обязательный schema-level статус каждого результата.
+
+```mermaid
+flowchart LR
+    DATA[Evaluated nuclear data] --> MODEL[Reaction/material model]
+    MODEL --> DER[Derived calculations]
+    DER --> STRESS[Stress tests]
+    STRESS --> PRED[Candidate falsifiable predictions]
+    PRED --> EXP[External experiment required]
+```
+
+## Ключевой пример правильного negative control
+
+Naive low-temperature screening extrapolation даёт огромный численный эффект и одновременно явно помечается как unphysical stress test. Именно это предотвращает превращение модели в псевдоэкспериментальное утверждение.
+
+## Следующий рубеж
+
+заменять phenomenological inputs evaluated datasets → uncertainty propagation → preregister nuclear-product signatures → blind experimental comparison. До этого никаких заявлений о подтверждении LENR.
